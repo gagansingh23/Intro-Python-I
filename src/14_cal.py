@@ -30,3 +30,35 @@ it should use today’s date to get the month and year.
 import sys
 import calendar
 from datetime import datetime
+
+
+if len(sys.argv) == 1:
+  y = 2020
+  m = 7
+  print(calendar.month(y, m))
+
+elif len(sys.argv) == 2:
+  m = int(sys.argv[1])
+  y = 2020
+  print(calendar.month(y, m))
+
+elif len(sys.argv) == 3:
+  m = int(sys.argv[1])
+  y = int(sys.argv[2])
+  print(calendar.month(y, m))
+
+elif len(sys.argv) != 1 or 2 or 3:
+  print("Please enter a int")
+  sys.exit(1)
+
+
+
+#accepts user input, what is the input?
+#wformat of the input? 
+#print the calendar based on input
+#what modules will we have to use? 
+
+#P
+#Use datetime module to print current date , no input needed
+#If statement if user enters one argument, print the datetime month for the current year
+#if user enters 2 arguments, print that month and year calendar
